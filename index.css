@@ -55,6 +55,12 @@ h1, h2, h3, h4, h5 {
     color: var(--color-light);
 
 }
+
+footer {
+    height: 500px;
+
+}
+
 p {
     font-weight: 500;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -192,6 +198,26 @@ div {
     }
 }
 
+/* ++++++++++++ MEDIA QUERIS(medium) ++++++++++++ */
+
+@media screen and (max-width: 1024px) {
+    .corazon {
+        left: 30%;
+    }
+}
+
+
+/* ++++++++++++ MEDIA QUERIS(small) ++++++++++++ */
+
+@media screen and (max-width: 600px) {
+    .corazon {
+        left: 30%;
+    }
+ 
+}
+
+
+
 
 
 /*================= my pictures ===================*/
@@ -201,12 +227,13 @@ div {
     display: grid;
     grid-template-columns: repeat(3, 3fr);
     gap: 1.5rem;
+    padding: 10px;
 
 }
 
 .about__container {
     display: grid;
-    grid-template-columns: 70% 180%;
+    grid-template-columns: 80% 190%;
     gap: 15%;
 
 }
@@ -246,15 +273,16 @@ div {
 
 @media screen and (max-width: 1024px) {
     .pictures {
-        margin-left: 5%;
+        margin-right: 20%;
         display: grid;
         grid-template-columns: repeat(1, 3fr);
         gap: 1.5rem;
         padding: 10px;
+        padding-right: 10px;
     
     }
     .about__container {
-        grid-template-columns: 40% 100%;
+        grid-template-columns: 50% 80%;
         grid-template-columns: 1fr;
         gap: 0;
     }
@@ -270,8 +298,13 @@ div {
     }
 } 
 @media screen and (max-width: 600px) {
+    .pictures {
+        margin-right: 40%;
+        padding-right: 100px;
+
+    }
     .about__container {
-        grid-template-columns: 30% 70%;
+        grid-template-columns: 100% 50%;
         grid-template-columns: 1fr;
         gap: 0;
     }
@@ -317,9 +350,32 @@ div {
     margin-top: 10px;
 
 }
+/* ++++++++++++ MEDIA QUERIS(medium) ++++++++++++ */
+
+@media screen and (max-width: 1024px) {
+    .k {
+        width: 90%;
+        left: 5%;
+    }
+}
+
+/* ++++++++++++ MEDIA QUERIS(small) ++++++++++++ */
+
+@media screen and (max-width: 600px) {
+    .k {
+        width: 90%;
+        left: 5%;
+    }
+}
+
+
+
+
+
 .p {
     position: relative;
     margin: auto;
     text-align: center;
     align-items: center;
+    margin-bottom: 100px;
 }
