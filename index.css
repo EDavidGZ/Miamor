@@ -1,0 +1,325 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --color-bg: #141f22;
+    --color-bg-variant: #6c2c2c;
+    --color-primary: #ff0000;
+    --color-primary-variant: rgba(77,181,255,0.4);
+    --color-white: #fff;
+    --color-light: rgb(143, 105, 105);
+    --transition: all 400ms ease ;
+
+    --container-width-lg: 75%;
+    --container-width-md: 86%;
+    --container-width-ms: 90%;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-white);
+    line-height: 1.7;
+    background-image: url(assets/bg-texture.png);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+/* ++++++++++++ Estilos generales ++++++++++++++ */
+
+.container {
+    width: var(--container-width-ms);
+    margin: 0 auto;
+
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: 500;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    color: var(--color-light);
+
+}
+p {
+    font-weight: 500;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    color: #c9d5d8;
+    font-size: 3rem;
+}
+
+h2 {
+
+    font-size: 2.5rem;
+}
+h4 {
+    font-size: 2rem;
+}
+h5 {
+    font-size: 1.9rem;
+}
+a{
+    color: var(--color-primary);
+    transition: var(--transition);
+    left: 40%;
+}
+
+a:hover {
+    color: var(--color-white);
+}
+
+.btn {
+    width: max-content;
+    display: inline-block;
+    color: var(--color-primary);
+    padding: 0.75rem 1.2rem;
+    cursor: pointer;
+    border: 1px solid var(--color-primary);
+    transition: var(--transition);
+    border-radius: 10%;
+}
+
+.btn:hover {
+    background: var(--color-white);
+    color: var(--color-bg);
+    border-color: transparent;
+}
+
+.btn-primary {
+    background: var(--color-primary);
+    color: var(--color-bg);
+
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+div {
+    margin-bottom: 100px;
+    margin-top: 100px;
+    display: block;
+    width: 100%;
+    object-fit: cover;
+
+    
+}
+
+.corazon {
+    width: 22rem;
+    height: 30rem;
+   position: relative;
+    left: calc(55% - 11rem);
+    margin-top: 4rem;
+   
+   
+   
+}
+
+
+/* ++++++++++++ MEDIA QUERIS(medium) ++++++++++++ */
+
+@media screen and (max-width: 1024px) {
+    .container {
+        width: var(--container-width-md);
+    }
+
+    section{
+        margin-top: 6rem;
+    }
+}
+
+/* ++++++++++++ MEDIA QUERIS(small) ++++++++++++ */
+
+@media screen and (max-width: 600px) {
+    .container {
+        width: var(--container-width-ms);
+    }
+
+    section > h2{
+        margin-bottom: 2rem;
+    }
+}
+
+
+/*===================== HEART =======================*/
+
+
+:root{
+    --heigth:200px;
+    --color:rgb(205, 21, 21);
+}
+.heart{
+    height: var(--heigth);
+    width: var(--heigth);
+    background-color: var(--color);
+    transform: rotate(45deg);
+    animation: latir .5s infinite ease-in-out alternate;
+}
+.heart::before, .heart::after{
+    content: "";
+    height: var(--heigth);
+    width: var(--heigth);
+    background-color: var(--color);
+    display: flex;
+    position: fixed;
+    border-radius: 50%;
+    transform: translateY(-100px);
+}
+.heart::after{
+    transform: translateX(-100px);
+}
+
+@keyframes latir{
+    100%{
+        transform:rotate(45deg) scale(1.2);
+    }
+}
+
+
+
+/*================= my pictures ===================*/
+
+.pictures {
+    margin-left: 5%;
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    gap: 1.5rem;
+
+}
+
+.about__container {
+    display: grid;
+    grid-template-columns: 70% 180%;
+    gap: 15%;
+
+}
+
+.about__me {
+    height: 52vh;
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 2rem;
+    background: linear-gradient(
+        45deg,
+        transparent,
+        var(--color-primary),
+        transparent
+    );
+    display: grid;
+    place-items: center;
+
+
+}
+
+.about__me-image {
+    background: var(--color-primary);
+    border-radius: 2rem;
+    overflow: hidden;
+    transform: rotate(10deg);
+    transition: var(--transition);
+}
+
+.about__me-image:hover {
+    transform: rotate(0);
+}
+
+
+/*================= my pictures(medias ===================*/
+
+
+@media screen and (max-width: 1024px) {
+    .pictures {
+        margin-left: 5%;
+        display: grid;
+        grid-template-columns: repeat(1, 3fr);
+        gap: 1.5rem;
+        padding: 10px;
+    
+    }
+    .about__container {
+        grid-template-columns: 40% 100%;
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .about__me {
+        height: 50vh;
+        width: 50%;
+        margin: 2rem auto 4rem;
+
+    }
+    .about__content p {
+        margin: 1rem 0 1.5rem;
+    }
+} 
+@media screen and (max-width: 600px) {
+    .about__container {
+        grid-template-columns: 30% 70%;
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .about__me {
+        width: 65%;
+        margin: 0 auto 3rem;
+    }
+    
+
+
+}
+.l {
+    background: rgb(0, 0, 0, 0.3);
+    width: max-content;
+    display: block;
+    padding: 0.7rem 1.7rem;
+    left: 50%;
+    z-index: 2;
+    position: fixed;
+    transform: translate(-50%);
+    bottom: 2rem;
+    display: flex;
+    gap: 0.8rem;
+    border-radius: 3rem;
+    backdrop-filter: blur(15px);
+}
+
+/*================= Carta ================*/
+
+.carta {
+    
+    height: 200vh;
+   
+}
+
+.k {
+    height: 100vh;
+    width: 40%;
+    aspect-ratio: 1/1;
+    border-radius: 2rem;
+    position: relative;
+    left: 33%;
+    margin-top: 10px;
+
+}
+.p {
+    position: relative;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+}
